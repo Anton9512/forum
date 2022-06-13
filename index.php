@@ -13,6 +13,7 @@ define('PATH','C:/MAMP/htdocs/forum');
 
 //Название папки проекта
 $path = end(explode("/", PATH));
+
 define('FORUM', $path);
 
 // echo current($path);
