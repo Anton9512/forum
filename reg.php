@@ -1,3 +1,8 @@
+<?php
+   if($_REQUEST['action'] === 'reg') {
+      die(header('location: /'.FORUM.'/reg.php'));
+   }
+?>
 <?php include PATH.'/header.php' ?>
 
 <h1>Регистрация</h1>

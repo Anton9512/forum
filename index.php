@@ -1,5 +1,5 @@
 <?php
-//Распечатся
+//Распечатать
 function d($array) {
    echo '<pre>';
    print_r($array);
