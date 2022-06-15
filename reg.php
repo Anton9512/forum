@@ -5,6 +5,8 @@
 
    if($_REQUEST['action'] === 'reg') {
 
+      $_REQUEST['password'] = md5($_REQUEST['password']);
+
       mysqli_query($db, "
       INSERT INTO user (email, login, password, name, surname)
       VALUES ('{$_REQUEST['email']}', '{$_REQUEST['login']}', '{$_REQUEST['password']}', '{$_REQUEST['name']}', '{$_REQUEST['surname']}');
