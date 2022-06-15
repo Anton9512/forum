@@ -6,6 +6,8 @@ function d($array) {
    echo '</pre>';
 }
 
+//
+define('SEC', true);
 
 // Путь к проекту
 // define('PATH', __DIR__);
@@ -16,18 +18,12 @@ $path = end(explode("/", PATH));
 
 define('FORUM', $path);
 
+include PATH.'/db_conn.php';
 // echo current($path);
 // end($path);
 
-//Подключение к бд
-$connect = new mysqli('localhost', "root", "root", "forum");
-
-if ($connect->connect_error) {
-   die('Error: ' .$connect->connect_error);
-}
-
 //Форум
-if (!$_REQUEST['page'] || $_REQUEST['page'] === 'forum') {
+if (!$_REQUEST['page']) {
    include PATH.'/forum.php';
    exit;
 }

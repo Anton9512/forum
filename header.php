@@ -1,3 +1,4 @@
+<?php if(!defined('SEC')) {die('Доступа нет');}?>
 <div>
    <a href="/<?=FORUM ?>/">Форум</a>
    <a href="/<?=FORUM ?>/?page=auth">Авторизация</a>
